@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Rental Application</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="author" content="colorlib.com">
+
+		<!-- MATERIAL DESIGN ICONIC FONT -->
+		<link rel="stylesheet" href="fonts/material-design-iconic-font/css/material-design-iconic-font.css">
+
+		<!-- font awesome link -->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/v4-shims.css">
+
+		<!-- DATE-PICKER -->
+		<link rel="stylesheet" href="vendor/date-picker/css/datepicker.min.css">
+
+		<!-- STYLE CSS -->
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<div class="wrapper">
+						<div class="logo-container">
+							<img class="logo" src="images\logo-2.png" alt="Logo">
+						</div>
+            <form name="submit-to-google-sheet" action="" id="wizard" >
+        		<!-- SECTION 1 -->
+                <h4></h4>
+                <section>
+                    <h3>Applicant Information</h3>
+                	<div class="form-row">
+                        <div class="form-holder">
+                            <i class="zmdi zmdi-account"></i>
+                            <input name="applicant-first-name" type="text" class="form-control" placeholder="First Name">
+                        </div>
+                        <div class="form-holder">
+                            <i class="zmdi zmdi-account"></i>
+                            <input name="applicant-last-name" type="text" class="form-control" placeholder="Last Name">
+                        </div>
+                	</div>
+                    <div class="form-row">
+                        <div class="form-holder">
+                            <i class="zmdi zmdi-email"></i>
+                            <input name="applicant-email" type="text" class="form-control" placeholder="Email Address">
+                        </div>
+                        <!-- <div class="form-holder">
+                            <i class="zmdi zmdi-home"></i>
+                            <input type="text" class="form-control" placeholder="Requested Property For Rent">
+                        </div> -->
+												<div class="form-holder">
+                            <i class="zmdi zmdi-cake"></i>
+                            <input name="applicant-birthdate" type="date" class="form-control" placeholder="Birth Date">
+                        </div>
+										</div>
+                    <div class="form-row">
+                        <div class="form-holder">
+                            <i class="zmdi zmdi-map"></i>
+                            <input name="applicant-country" type="text" class="form-control" placeholder="Country">
+                        </div>
+                        <div class="form-group">
+                            <div class="form-holder">
+                                <i class="zmdi zmdi-pin"></i>
+                                <input name="applicant-state" type="text" class="form-control" placeholder="State">
+                            </div>
+                            <div class="form-holder">
+                                <i class="zmdi zmdi-pin-drop"></i>
+                                <input name="applicant-city" type="text" class="form-control" placeholder="City">
+                            </div>
+                        </div>
+                    </div>
+										<div class="form-row">
+												<div class="form-holder">
+														<i class="zmdi zmdi-turning-sign"></i>
+														<textarea name="applicant-street" type="text" class="form-control textarea-form" placeholder="Street"></textarea>
+												</div>
+												<div class="form-group">
+														<div class="form-holder">
+																<i class="zmdi zmdi-pin"></i>
+																<input name="applicant-zip" type="text" class="form-control" placeholder="Zip">
+														</div>
+														<div class="form-holder empty-space">
+																<i class="zmdi zmdi-pin-drop"></i>
+																<input type="text" class="form-control" placeholder="City">
+														</div>
+												</div>
+										</div>
+                    <div class="form-row">
+                        <div class="form-holder">
+                            <i class="zmdi zmdi-smartphone-android"></i>
+                            <input name="applicant-phone" type="text" class="form-control" placeholder="Phone Number">
+                        </div>
+                        <!-- <div class="form-holder password">
+                            <i class="zmdi zmdi-eye"></i>
+                            <input type="password" class="form-control" placeholder="Reference Coder">
+                        </div> -->
+												<div class="form-holder">
+														<i class="zmdi"></i>
+														<input name="applicant-ssn" type="text" class="form-control" placeholder="Enter SSN">
+												</div>
+                    </div>
+										<div class="form-row">
+												<div class="form-holder">
+														<i class="zmdi zmdi-home"></i>
+														<input name="req-property" type="text" class="form-control" placeholder="Requested Property For Rent">
+												</div>
+												<div class="form-holder empty-space">
+														<i class=""></i>
+														<input type="text" class="form-control" placeholder="">
+												</div>
+										</div>
+										<div class="form-row">
+												<div class="form-holder">
+														<i class="zmdi zmdi-accounts-alt"></i>
+														<input name="group-lead" type="text" class="form-control" placeholder="Group Lead Member Name">
+												</div>
+												<div class="form-holder">
+														<i class="zmdi zmdi-accounts-alt"></i>
+														<textarea name="group-members" type="text" class="form-control textarea-form" placeholder="Group Members Names"></textarea>
+												</div>
+										</div>
+										<div class="form-row">
+												<div class="form-holder w-100">
+														<input name="estimated-payment" type="number" class="form-control" placeholder="Estimated amount you are prepared to pay (without utilities)">
+														<i class="zmdi zmdi-money"></i>
+												</div>
+										</div>
+										<div class="form-row">
+												<div class="form-holder w-100">
+														<i class="zmdi zmdi-caret-down-circle"></i>
+														<select name="plan-on-car?" type="text" class="form-control">
+															<option value="Are you planning on having a car?" disabled selected hidden>Are you planning on having a car?</option>
+															<option value="Yes">Yes</option>
+															<option value="No">No</option>
+															<option value="Maybe">Maybe</option>
+
+														</select>
+												</div>
+										</div>
+										<div class="form-row">
+												<div class="form-holder">
+														<i class="zmdi zmdi-car"></i>
+														<input name="car-make" type="text" class="form-control" placeholder="Car Make">
+												</div>
+												<div class="form-holder">
+														<i class="zmdi zmdi-car"></i>
+														<input name="car-model" type="text" class="form-control" placeholder="Car Model">
+												</div>
+										</div>
+										<div class="form-row">
+												<div class="form-holder">
+														<i class="zmdi zmdi-car"></i>
+														<input name="license-plate-num" type="text" class="form-control" placeholder="Car License Plate Number">
+												</div>
+												<div class="form-holder">
+														<i class="zmdi zmdi-car"></i>
+														<input name="driver-license-num" type="text" class="form-control" placeholder="Drivers License Number">
+												</div>
+										</div>
+										<div class="form-row">
+												<div class="form-holder">
+														<i class="fas fa-school" style="font-size: 13px;"></i>
+														<input name="applicant-school" type="text" class="form-control" placeholder="School">
+												</div>
+												<div class="form-holder">
+														<i class="fas fa-certificate" style="font-size: 13px;"></i>
+														<input name="applicant-major" type="text" class="form-control" placeholder="Major">
+												</div>
+										</div>
+										<div class="form-row">
+												<div class="form-holder">
+														<i class="fas fa-graduation-cap" style="font-size: 13px;"></i>
+														<input name="applicant-school-year" type="text" class="form-control" placeholder="Year">
+												</div>
+												<div class="form-holder">
+														<i class="fas fa-star" style="font-size: 13px;"></i>
+														<input name="applicant-gpa" type="text" class="form-control" placeholder="GPA">
+												</div>
+										</div>
+										<div class="form-row">
+												<div class="form-holder w-100">
+														<input name="local-affiliations" type="text" class="form-control" placeholder="Local affiliations - faternity, sorority, etc.">
+														<i class="zmdi zmdi-group-work"></i>
+												</div>
+										</div>
+										<div class="form-row">
+												<div class="form-holder w-100">
+														<i class="zmdi zmdi-caret-down-circle"></i>
+														<select name="payment-schedule" type="text" class="form-control">
+															<option value="Preferred Payment Schedule" disabled selected hidden>Preferred Payment Schedule</option>
+															<option value="Quarterly">Quarterly</option>
+															<option value="Biannual">Biannual</option>
+															<option value="Yearly">Yearly</option>
+															<option value="Monthly">Monthly</option>
+															<option value="Bimonthly">Bimonthly</option>
+														</select>
+												</div>
+										</div>
+										<div class="form-row">
+												<div class="form-holder w-100">
+														<i class="zmdi zmdi-caret-down-circle"></i>
+														<select name="who-pay-rent" type="text" class="form-control">
+															<option value="Who is paying the rent?" disabled selected hidden>Who is paying the rent?</option>
+															<option value="Self">Self</option>
+															<option value="Parents">Parents</option>
+															<option value="Scholarships">Scholarships</option>
+															<option value="Others">Others</option>
+														</select>
+												</div>
+										</div>
+										<div class="form-row">
+												<div class="form-holder w-100">
+													<p class="radio-button-txt">It is so important that you register to vote in Collage Park (it will make a difference for YOU and future Terps). Pass this on to everyone you know - this CAN really make a difference for YOU living in College Park. Are you willing to register to vote?</p>
+													<div class="radio-btn-row">
+														<label class="radio-inline">
+															<input type="radio" name="willing-to-register-to-vote">Yes
+														</label>
+														<label class="radio-inline">
+															<input type="radio" name="willing-to-register-to-vote">No
+														</label>
+													</div>
+												</div>
+										</div>
+										<div class="form-row">
+												<div class="form-holder w-100">
+														<i class="zmdi zmdi-turning-sign"></i>
+														<textarea name="property-address" type="text" class="form-control textarea-form" placeholder="Property address that you're intersted In?"></textarea>
+												</div>
+										</div>
+                </section>
+
+
+				<!-- SECTION 2 -->
+                <h4></h4>
+                <section>
+                	<h3>Guarantors</h3>
+										<div class="form-row">
+												<div class="form-holder w-100">
+													<p class="radio-button-txt">Both parents are required to sign the guaranty. Is there any problems with that?</p>
+													<div class="radio-btn-row">
+														<label class="radio-inline">
+															<input type="radio" name="problem-with-both-parents-signing">Yes
+														</label>
+														<label class="radio-inline">
+															<input type="radio" name="problem-with-both-parents-signing">No
+														</label>
+													</div>
+												</div>
+										</div>
+										<div class="form-row" style="margin-bottom: 10px;">
+											<label for="note-reason">If yes, please note reason, If no, please enter N/A:</label>
+										</div>
+                    <div class="form-row">
+                        <div class="form-holder w-100">
+                            <input id="note-reason" type="text" class="form-control" placeholder="Passed away/have no contact/financially independent/other.">
+                            <i class="fas fa-question"></i>
+                        </div>
+                    </div>
+										<div class="form-row" style="margin-bottom: 10px;">
+											<h2>Parent 1 Information</h2>
+										</div>
+										<div class="form-row">
+	                        <div class="form-holder">
+	                            <i class="zmdi zmdi-account"></i>
+	                            <input name="parent-1-first-name" type="text" class="form-control" placeholder="First Name">
+	                        </div>
+	                        <div class="form-holder">
+	                            <i class="zmdi zmdi-account"></i>
+	                            <input name="parent-1-last-name" type="text" class="form-control" placeholder="Last Name">
+	                        </div>
+	                	</div>
+										<div class="form-row">
+												<div class="form-holder">
+														<i class="zmdi zmdi-map"></i>
+														<input name="parent-1-country" type="text" class="form-control" placeholder="Country">
+												</div>
+												<div class="form-group">
+														<div class="form-holder">
+																<i class="zmdi zmdi-pin"></i>
+																<input name="parent-1-state" type="text" class="form-control" placeholder="State">
+														</div>
+														<div class="form-holder">
+																<i class="zmdi zmdi-pin-drop"></i>
+																<input name="parent-1-city" type="text" class="form-control" placeholder="City">
+														</div>
+												</div>
+										</div>
+										<div class="form-row">
+												<div class="form-holder">
+														<i class="zmdi zmdi-turning-sign"></i>
+														<textarea name="parent-1-street" type="text" class="form-control textarea-form" placeholder="Street"></textarea>
+												</div>
+												<div class="form-group">
+														<div class="form-holder">
+																<i class="zmdi zmdi-pin"></i>
+																<input name="parent-1-zip" type="text" class="form-control" placeholder="Zip">
+														</div>
+														<div class="form-holder empty-space">
+																<i class="zmdi zmdi-pin-drop"></i>
+																<input type="text" class="form-control" placeholder="">
+														</div>
+												</div>
+										</div>
+										<div class="form-row">
+												<div class="form-holder">
+														<i class="zmdi zmdi-smartphone-android"></i>
+														<input name="parent-1-phone-num" type="text" class="form-control" placeholder="Phone Number">
+												</div>
+												<div class="form-holder">
+														<i class="zmdi zmdi-email"></i>
+														<input name="parent-1-email" type="text" class="form-control" placeholder="Email Address">
+												</div>
+										</div>
+										<div class="form-row">
+												<div class="form-holder">
+														<i class="fas fa-user-tie"></i>
+														<input name="parent-1-place-of-employment" type="text" class="form-control" placeholder="Place of Employment">
+												</div>
+												<div class="form-holder">
+														<i class="fas fa-user-tie"></i>
+														<input name="parent-1-position" type="text" class="form-control" placeholder="Position">
+												</div>
+										</div>
+										<div class="form-row" style="margin-bottom: 10px;">
+											<h2>Parent 2 Information</h2>
+										</div>
+										<div class="form-row">
+													<div class="form-holder">
+															<i class="zmdi zmdi-account"></i>
+															<input name="parent-2-first-name" type="text" class="form-control" placeholder="First Name">
+													</div>
+													<div class="form-holder">
+															<i class="zmdi zmdi-account"></i>
+															<input name="parent-2-last-name" type="text" class="form-control" placeholder="Last Name">
+													</div>
+										</div>
+										<div class="form-row">
+												<div class="form-holder">
+														<i class="zmdi zmdi-map"></i>
+														<input name="parent-2-country" type="text" class="form-control" placeholder="Country">
+												</div>
+												<div class="form-group">
+														<div class="form-holder">
+																<i class="zmdi zmdi-pin"></i>
+																<input name="parent-2-state" type="text" class="form-control" placeholder="State">
+														</div>
+														<div class="form-holder">
+																<i class="zmdi zmdi-pin-drop"></i>
+																<input name="parent-2-city" type="text" class="form-control" placeholder="City">
+														</div>
+												</div>
+										</div>
+										<div class="form-row">
+												<div class="form-holder">
+														<i class="zmdi zmdi-turning-sign"></i>
+														<textarea name="parent-2-street" type="text" class="form-control textarea-form" placeholder="Street"></textarea>
+												</div>
+												<div class="form-group">
+														<div class="form-holder">
+																<i class="zmdi zmdi-pin"></i>
+																<input name="parent-2-zip" type="text" class="form-control" placeholder="Zip">
+														</div>
+														<div class="form-holder empty-space">
+																<i class="zmdi zmdi-pin-drop"></i>
+																<input type="text" class="form-control" placeholder="">
+														</div>
+												</div>
+										</div>
+										<div class="form-row">
+												<div class="form-holder">
+														<i class="zmdi zmdi-smartphone-android"></i>
+														<input name="parent-2-phone-num" type="text" class="form-control" placeholder="Phone Number">
+												</div>
+												<div class="form-holder">
+														<i class="zmdi zmdi-email"></i>
+														<input name="parent-2-email" type="text" class="form-control" placeholder="Email Address">
+												</div>
+										</div>
+										<div class="form-row">
+												<div class="form-holder">
+														<i class="fas fa-user-tie"></i>
+														<input name="parent-2-place-of-employment" type="text" class="form-control" placeholder="Place of Employment">
+												</div>
+												<div class="form-holder">
+														<i class="fas fa-user-tie"></i>
+														<input name="parent-2-position" type="text" class="form-control" placeholder="Position">
+												</div>
+										</div>
+
+                </section>
+
+                <!-- SECTION 3 -->
+                <h4></h4>
+                <section>
+									<div id="readroot">
+										<h3 style="margin-bottom: 16px;">Rental History</h3>
+										<!-- <input type="button" value="Remove Entry" onclick="this.parentNode.parentNode.removeChild(this.parentNode);" /><br /><br /> -->
+										<!-- <a class="rem-rental-history"  onclick="this.parentNode.parentNode.removeChild(this.parentNode);">X Remove Rental History Entry</a><br /><br /> -->
+
+										<div class="form-row" style="margin-bottom: 10px;">
+											<label class="rental-add-count">Rental Address:</label>
+										</div>
+										<div class="form-row">
+												<div class="form-holder">
+														<i class="zmdi zmdi-map"></i>
+														<input name="rental-history-country" type="text" class="form-control" placeholder="Country">
+												</div>
+												<div class="form-group">
+														<div class="form-holder">
+																<i class="zmdi zmdi-pin"></i>
+																<input name="rental-history-state" type="text" class="form-control" placeholder="State">
+														</div>
+														<div class="form-holder">
+																<i class="zmdi zmdi-pin-drop"></i>
+																<input name="rental-history-city" type="text" class="form-control" placeholder="City">
+														</div>
+												</div>
+										</div>
+										<div class="form-row">
+												<div class="form-holder">
+														<i class="zmdi zmdi-turning-sign"></i>
+														<textarea name="rental-history-street"type="text" class="form-control textarea-form" placeholder="Street"></textarea>
+												</div>
+												<div class="form-group">
+														<div class="form-holder">
+																<i class="zmdi zmdi-pin"></i>
+																<input name="rental-history-zip" type="text" class="form-control" placeholder="Zip">
+														</div>
+														<div class="form-holder empty-space">
+																<i class="zmdi zmdi-pin-drop"></i>
+																<input type="text" class="form-control" placeholder="">
+														</div>
+												</div>
+										</div>
+										<div class="form-row">
+													<div class="form-holder">
+															<i class="zmdi zmdi-calendar-alt"></i>
+															<input name="rental-history-date" type="text" class="form-control" placeholder="Rental Dates">
+													</div>
+													<div class="form-holder">
+															<i class="zmdi zmdi-money"></i>
+															<input name="rental-history-monthly-rent" type="text" class="form-control" placeholder="Monthly Rent">
+													</div>
+										</div>
+										<div class="form-row">
+													<div class="form-holder w-100">
+															<i class="fas fa-question"></i>
+															<input name="reason-for-leaving" type="text" class="form-control" placeholder="Reason For leaving">
+													</div>
+										</div>
+										<div class="form-row" style="margin-bottom: 10px;">
+											<label>Landlord Information:</label>
+										</div>
+										<div class="form-row">
+													<div class="form-holder">
+															<i class="zmdi zmdi-account"></i>
+															<input name="landlord-first-name" type="text" class="form-control" placeholder="First Name">
+													</div>
+													<div class="form-holder">
+															<i class="zmdi zmdi-account"></i>
+															<input name="landlord-last-name" type="text" class="form-control" placeholder="Last Name">
+													</div>
+										</div>
+										<div class="form-row">
+												<div class="form-holder">
+														<i class="zmdi zmdi-smartphone-android"></i>
+														<input name="landlord-phone" type="text" class="form-control" placeholder="Phone Number">
+												</div>
+												<div class="form-holder">
+														<i class="zmdi zmdi-email"></i>
+														<input name="landlord-email" type="text" class="form-control" placeholder="Email Address">
+												</div>
+										</div>
+										<a class="rem-rental-history"  onclick="this.parentNode.parentNode.removeChild(this.parentNode);">x Remove Rental History Entry</a><br /><br />
+
+									</div>
+									<span id="writeroot"></span>
+									<a class="add-rental-history"  onclick="addEntry1();">+ Add Rental History Entry</a>
+
+									<!-- <input type="button" onclick="moreFields()" value="Add Rental History Entry" /> -->
+
+                </section>
+
+                <!-- SECTION 4 -->
+								<h4></h4>
+                <section>
+									<div class="entry-container">
+
+									</div>
+									<div id="readroot2">
+										<h3 style="margin-bottom: 16px;">Employment</h3>
+										<!-- <input type="button" value="Remove Entry" onclick="this.parentNode.parentNode.removeChild(this.parentNode);" /><br /><br /> -->
+										<!-- <a class="rem-rental-history"  onclick="this.parentNode.parentNode.removeChild(this.parentNode);">X Remove Rental History Entry</a><br /><br /> -->
+
+										<div class="form-row" style="margin-bottom: 10px;">
+											<label class="rental-add-count">Employer Information:</label>
+										</div>
+										<div class="form-row">
+													<div class="form-holder w-100">
+															<i class="zmdi zmdi-account"></i>
+															<input name="employer-name" type="text" class="form-control" placeholder="Name">
+													</div>
+										</div>
+										<div class="form-row">
+												<div class="form-holder">
+														<i class="zmdi zmdi-smartphone-android"></i>
+														<input name="employer-phone" type="text" class="form-control" placeholder="Phone Number">
+												</div>
+												<div class="form-holder">
+														<i class="zmdi zmdi-email"></i>
+														<input name="employer-email" type="text" class="form-control" placeholder="Email Address(optional)">
+												</div>
+										</div>
+										<div class="form-row" style="margin-bottom: 10px;">
+											<label class="rental-add-count">Employer Address(optional):</label>
+										</div>
+										<div class="form-row">
+												<div class="form-holder">
+														<i class="zmdi zmdi-map"></i>
+														<input name="employer-country" type="text" class="form-control" placeholder="Country">
+												</div>
+												<div class="form-group">
+														<div class="form-holder">
+																<i class="zmdi zmdi-pin"></i>
+																<input name="employer-state" type="text" class="form-control" placeholder="State">
+														</div>
+														<div class="form-holder">
+																<i class="zmdi zmdi-pin-drop"></i>
+																<input name="employer-city"type="text" class="form-control" placeholder="City">
+														</div>
+												</div>
+										</div>
+										<div class="form-row">
+												<div class="form-holder">
+														<i class="zmdi zmdi-turning-sign"></i>
+														<textarea name="employer-street" type="text" class="form-control textarea-form" placeholder="Street"></textarea>
+												</div>
+												<div class="form-group">
+														<div class="form-holder">
+																<i class="zmdi zmdi-pin"></i>
+																<input name="employer-zip" type="text" class="form-control" placeholder="Zip">
+														</div>
+														<div class="form-holder empty-space">
+																<i class="zmdi zmdi-pin-drop"></i>
+																<input type="text" class="form-control" placeholder="">
+														</div>
+												</div>
+										</div>
+										<div class="form-row">
+													<div class="form-holder">
+															<i class="fas fa-user-tie"></i>
+															<input name="position-held" type="text" class="form-control" placeholder="Position Held">
+													</div>
+													<div class="form-holder">
+															<i class="zmdi zmdi-money"></i>
+															<input name="monthly-gross-salary" type="text" class="form-control" placeholder="Monthly Gross Salary">
+													</div>
+										</div>
+										<div class="form-row" style="margin-bottom: 10px;">
+											<label class="rental-add-count">Employment Dates:</label>
+										</div>
+										<div class="form-row date-from-to-row">
+													<div class="form-holder" style="">
+															<i class="zmdi zmdi-calendar-alt"></i>
+															<input name="employment-date-from" type="date" class="form-control" >
+													</div>
+													<div class="form-holder arrow-container" style="width:10%;">
+															<!-- <i class="zmdi zmdi-calendar-alt"></i> -->
+															<i class="fas fa-arrow-right"></i>
+													</div>
+													<div class="form-holder">
+															<i class="zmdi zmdi-calendar-alt"></i>
+															<input name="employment-date-to" type="date" class="form-control">
+													</div>
+										</div>
+										<div class="form-row" style="margin-bottom: 10px;">
+											<label class="rental-add-count">Supervisor Name</label>
+										</div>
+										<div class="form-row">
+													<div class="form-holder">
+															<i class="zmdi zmdi-account"></i>
+															<input name="supervisor-first-name" type="text" class="form-control" placeholder="First">
+													</div>
+													<div class="form-holder">
+															<i class="zmdi zmdi-account"></i>
+															<input name="supervisor-last-name" type="text" class="form-control" placeholder="Last">
+													</div>
+										</div>
+										<div class="form-row">
+												<div class="form-holder w-100">
+														<i class="fas fa-user-tie"></i>
+														<input name="supervisor-title" type="text" class="form-control" placeholder="Supervisor Title">
+												</div>
+										</div>
+										<a class="rem-rental-history"  onclick="this.parentNode.parentNode.removeChild(this.parentNode);">x Remove Employment Entry</a><br /><br />
+
+									</div>
+									<span id="writeroot2"></span>
+									<a id="add-entry" class="add-rental-history" onclick="addEntry2();">+ Add Employment Entry</a>
+
+									<!-- <input type="button" onclick="moreFields()" value="Add Rental History Entry" /> -->
+
+
+                </section>
+								<!-- SECTION 5 -->
+								<h4></h4>
+								<section>
+									<h3>Terms and conditions</h3>
+										<div class="form-row">
+												<div class="form-holder w-100">
+													<p>I understand that this is a routine application to establish credit, character, employment, and rental history. I also understand that this is NOT an agreement to rent and that all applications must be approved. I authorize verification of references given. I declare that the statements above are true and correct, and I agree that the landlord may terminate my agreement entered into in reliance on any misstatement made above.</p>
+
+												</div>
+										</div>
+										<div class="form-row">
+												<div class="form-holder w-100">
+													<input name="terms-and-conditions-agreement" type="checkbox" id="agreement" name="agree" value="I Agree" style="color: black;">
+													<label for="agree">Agreed To</label><br>
+												</div>
+										</div>
+
+										<div class="form-group">
+												<div class="form-holder">
+													<label>Agreed By:</label>
+												</div>
+												<div class="form-holder textarea-form">
+														<!-- <i class="zmdi zmdi-profile"></i> -->
+														<input name="applicant-full-name" type="text" class="form-control" placeholder="Type Your Full Name">
+												</div>
+										</div>
+										<div class="button-row">
+											<button id="submit-form" class="submit-button" type="submit">Submit</button>
+										</div>
+										<!-- <a type="submit" id="submit-form" href="#finish" role="menuitem">Submit Form</a> -->
+								</section>
+            </form>
+		</div>
+
+		<script src="js/jquery-3.3.1.min.js"></script>
+
+		<!-- JQUERY STEP -->
+		<script src="js/jquery.steps.js"></script>
+
+		<script src="js/main.js"></script>
+		<script src="js\spreadsheet-script.js"></script>
+
+<!-- Template created and distributed by Colorlib -->
+</body>
+</html>
